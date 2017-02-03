@@ -147,6 +147,8 @@ class RecordSaveRestoreController():
                           
     def fchoicebox_changed(self,event):
         self.fclear_PV_list_dict()
+        if self.GUI_object.record_type_cbox.GetStringSelection() == '':
+            return
         self.separator = self.separator_dict[self.GUI_object.record_type_cbox.GetStringSelection()]
         self.record_name = self.GUI_object.record_text.GetValue() + self.separator
         self.fparse_req_file(self.record_name)

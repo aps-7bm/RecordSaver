@@ -27,7 +27,7 @@ class MainFrame(wx.Frame):
     '''
     def __init__(self,parent,title):
         #self.controller = controller.PyDMM_Mono_Control(self)
-        self.main_font = wx.Font(16,wx.FONTFAMILY_DEFAULT,wx.FONTSTYLE_NORMAL,wx.FONTWEIGHT_MAX)
+        self.main_font = wx.Font(16,wx.FONTFAMILY_DEFAULT,wx.FONTSTYLE_NORMAL,wx.FONTWEIGHT_NORMAL)
         self.default_directory = os.getcwd() + '/databases'
         self.controller = RSRcontroller.RecordSaveRestoreController(self)
         wx.Frame.__init__(self,parent,title=title,size=(800,220))
