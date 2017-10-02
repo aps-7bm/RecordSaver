@@ -65,14 +65,14 @@ class RecordSaveRestoreController():
                 #Trap to skip comment lines
                 if line.startswith("#"):
                     continue
-                print line
+                print(line)
                 #Remove ending "$" if it exists
                 req_suffix = line.split('.')[1].strip()
                 if req_suffix[-1] == '$':
                     self.PV_list.append(record_name + req_suffix[:-1])
                 else:
                     self.PV_list.append(record_name + req_suffix)
-        print self.PV_list
+        print(list(self.PV_list))
         self.GUI_object.fwrite_status_message("List of PVs read in")
     
     def fvalidate_PV_list(self):
@@ -137,7 +137,7 @@ class RecordSaveRestoreController():
         self.fchoicebox_changed()
         self.GUI_object.fselect_open_file()
         db_filename = self.GUI_object.file_text.text()
-        print db_filename
+        print(db_filename)
         if self.valid_file:
             self.fvalidate_PV_list()
         else:
@@ -154,22 +154,21 @@ class RecordSaveRestoreController():
         self.separator = self.separator_dict[selected_record_type]
         self.record_name = str(self.GUI_object.lineEdit.displayText()) + self.separator
         self.fparse_req_file(self.record_name)
-        print("changed")
-        print self.GUI_object.comboBox.count()
+        print(self.GUI_object.comboBox.count())
     
     def fwrite_values_to_file(self):
         '''Read the PVs from EPICS and save to file.
         '''    
         #Make a shelve object to hold the suffixes and values
-        print self.GUI_object.file_text.text()
+        print(self.GUI_object.file_text.text())
         pv_database = shelve.open(self.GUI_object.file_text.text(),'n')
         self.GUI_object.fwrite_status_message("Database opened successfully")
         #Loop through the suffixes and values
         for PV_name in self.PV_list:
             suffix = str(PV_name.split(self.separator)[-1])
-            print suffix
-            print self.PV_dict[PV_name]
-            print self.PV_dict[PV_name].value
+            print(suffix)
+            print(self.PV_dict[PV_name])
+            print(self.PV_dict[PV_name].value)
             pv_database[suffix] = str(self.PV_dict[PV_name].value)
         #Close the shelve object
         pv_database.close()
@@ -187,7 +186,7 @@ class RecordSaveRestoreController():
             #Loop through the suffixes, setting value of PVs to the entry from the database
             #Loop through the PV_name list to keep the same order as req file
             for PV_name in self.PV_list:
-                print "Restoring " + PV_name
+                print("Restoring " + PV_name)
                 db_suffix = PV_name.split(self.separator)[-1]
                 print(db_dict[db_suffix])
                 try:
