@@ -150,7 +150,7 @@ class Ui_RecordSaver(object):
     def fselect_save_file(self):
         '''Opens up the file saving dialog.
         '''
-        filename= QtGui.QFileDialog.getSaveFileName(caption='Choose save file, no extension',directory=self.controller.save_directory.filter='')
+        filename= QtGui.QFileDialog.getSaveFileName(caption='Choose save file, no extension',directory=self.controller.save_directory,filter='')
         print(filename)
         if filename:
             #Remove any extension from the file
