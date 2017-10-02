@@ -1,0 +1,14 @@
+<config>
+<ProgramDefaults Default_Save_Location="/home/akastengren/data/SprayData/databases/" WindowSize="800,200" DefaultRecordType="Scan" Default_Record="7bmb1:scan1" CA_Timeout="10.">
+</ProgramDefaults>
+<RecordTypes>
+	<calcOut FileName="calcout_settings.req" Separator="."></calcOut>
+	<Motor FileName="motor_settings.req" Separator="."></Motor>
+	<DG645_Tweaks FileName="drvDG645_settings.req" Separator=":"></DG645_Tweaks>
+	<DG645_All FileName="DG645_all_settings.req" Separator=":"></DG645_All>
+	<StringCalcOut FileName="scalcout_settings.req" Separator="."></StringCalcOut>
+	<Scan FileName="scan_settings.req" Separator="."></Scan>
+	<userCalc FileName="swait_settings.req" Separator="."></userCalc>
+	<ArrayCalcOut FileName="acalcout_settings.req" Separator="."></ArrayCalcOut>
+	<StringSeq FileName="sseq_settings.req" Separator="."></StringSeq></RecordTypes>
+</config>

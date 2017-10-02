@@ -1,0 +1,15 @@
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.944100) ############################################################
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.944321) startup
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.944530) trigger PV       = 
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.944661) message PV       = 
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.944788) email list       = ['']
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.944908) log file         = pvMail-12688.log
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945127) logging interval = 300.0
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945255) sleep duration   = 0.2
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945374) interface        = command-line
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945547) user             = 7bmb
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945675) host             = karman.xray.aps.anl.gov
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945802) program          = /APSshare/anaconda/x86_64/bin/pvMail
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.945923) PID              = 12688
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.946043) PyEpics version  = 3.2.5
+INFO:root:(12688,pvMail,2017-02-03 12:17:19.946161) config file      = /home/beams/7BMB/.pvMail/pvMail.ini
