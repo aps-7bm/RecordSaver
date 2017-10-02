@@ -53,6 +53,13 @@ entry box.  Leave off any PV suffixes.
 If this is wrong, saving/restoring will fail.
 
 3. Click either "Save Record" or "Restore Record".  
+If saving a record, select the directory in which to save
+the record.  The data directory in the install is given
+as a logical place to save the data.
+If restoring a record, select the database file (*.dat) 
+containing the record data.
+Save/restore operations will start once the destination 
+or restore file are selected. 
 The bottom status bar will indicate the status of the 
 saving/restoring.
 
