@@ -150,7 +150,8 @@ class Ui_RecordSaver(object):
     def fselect_save_file(self):
         '''Opens up the file saving dialog.
         '''
-        filename= QtGui.QFileDialog.getSaveFileName(caption='Choose save file, no extension',directory=self.controller.save_directory,filter='')
+        filename= QtGui.QFileDialog.getSaveFileName(caption='Choose save file, no extension',directory=self.controller.save_directory)
+        filename = str(filename)
         print(filename)
         if filename:
             #Remove any extension from the file
@@ -166,7 +167,9 @@ class Ui_RecordSaver(object):
     def fselect_open_file(self):
         '''Opens up the file saving dialog.
         '''
-        filename = QtGui.QFileDialog.getOpenFileName(caption='Choose file to open',directory=self.controller.save_directory,filter='*.dat')
+        filename = QtGui.QFileDialog.getOpenFileName(caption='Choose file to open',directory=self.controller.save_directory,
+                                                    filter='Databases (*.dat)',selectedFilter='Databases (*.dat)')
+        filename = str(filename)
         print(filename)
         if filename:
             #Remove any extension from the file

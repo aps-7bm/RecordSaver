@@ -180,7 +180,7 @@ class RecordSaveRestoreController():
         '''Read the PVs from the database and restore to EPICS.
         ''' 
         failed_PVs = [] 
-        timeout_time = float(elf.program_defaults['CA_Timeout'])      
+        timeout_time = float(self.program_defaults['CA_Timeout'])      
         try:
             #Try to open a shelve object 
             db_dict = shelve.open(db_filename,'r') 

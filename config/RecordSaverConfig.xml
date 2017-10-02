@@ -1,5 +1,5 @@
 <config>
-<ProgramDefaults Default_Save_Location="/home/akastengren/data/SprayData/databases/" WindowSize="800,200" DefaultRecordType="Scan" Default_Record="7bmb1:scan1" CA_Timeout="10.">
+<ProgramDefaults Default_Save_Location="/home/SprayData/databases/" WindowSize="800,200" DefaultRecordType="Scan" Default_Record="7bmb1:scan1" CA_Timeout="10.">
 </ProgramDefaults>
 <RecordTypes>
 	<calcOut FileName="calcout_settings.req" Separator="."></calcOut>
