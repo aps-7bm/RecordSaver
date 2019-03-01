@@ -3,7 +3,7 @@
 </ProgramDefaults>
 <RecordTypes>
 	<calcOut FileName="calcout_settings.req" Separator="."></calcOut>
-	<Motor FileName="motor_settings.req" Separator="."></Motor>
+	<Motor FileName="basic_motor_settings.req" Separator="."></Motor>
 	<DG645_Tweaks FileName="drvDG645_settings.req" Separator=":"></DG645_Tweaks>
 	<DG645_All FileName="DG645_all_settings.req" Separator=":"></DG645_All>
 	<StringCalcOut FileName="scalcout_settings.req" Separator="."></StringCalcOut>

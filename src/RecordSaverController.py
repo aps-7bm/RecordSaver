@@ -11,9 +11,9 @@ import epics
 import os
 import os.path
 import shelve
-import anydbm
+#import anydbm
 import xml.etree.ElementTree as ET
-anydbm._defaultmod = __import__('dumbdbm')
+#anydbm._defaultmod = __import__('dumbdbm')
 import time
 
 connection_timeout = 5  #seconds to wait for PV to connect
