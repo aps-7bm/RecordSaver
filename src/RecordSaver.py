@@ -137,7 +137,7 @@ class Ui_RecordSaver(object):
         '''Opens up the file saving dialog.
         '''
         filename,__ = QtWidgets.QFileDialog.getSaveFileName(caption='Choose save file, no extension',directory=self.controller.save_directory)
-        print(filename)
+        #print(filename)
         if filename:
             #Remove any extension from the file
             if "." in filename:
@@ -153,7 +153,7 @@ class Ui_RecordSaver(object):
         '''Opens up the file saving dialog.
         '''
         filename,__ = QtWidgets.QFileDialog.getOpenFileName(caption='Choose file to open',directory=self.controller.save_directory,filter='*.dat')
-        print(filename)
+        #print(filename)
         if filename:
             #Remove any extension from the file
             if "." in filename:
@@ -195,7 +195,7 @@ class Ui_RecordSaver(object):
         Alan Kastengren, 7-BM, APS
         akastengren@anl.gov
         '''
-        print(help_text)
+        #print(help_text)
         QtWidgets.QMessageBox.about(RecordSaver, "RecordSaver Help", help_text)
 
 if __name__ == "__main__":

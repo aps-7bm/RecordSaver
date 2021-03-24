@@ -9,11 +9,9 @@ February 4, 2016: Add try/except block on update so things don't hang if a PV fa
 '''
 import epics
 import os
-import os.path
+from pathlib import Path
 import shelve
-#import anydbm
 import xml.etree.ElementTree as ET
-#anydbm._defaultmod = __import__('dumbdbm')
 import time
 
 connection_timeout = 5  #seconds to wait for PV to connect
@@ -31,7 +29,8 @@ class RecordSaveRestoreController():
     def fparse_config_file(self):
         '''Parse the XML config file.
         '''
-        config_tree = ET.parse(os.path.abspath('../config') + '/RecordSaverConfig.xml')
+        config_tree = ET.parse(Path(__file__).parent.parent.joinpath('config', 'RecordSaverConfig.xml'))
+        #config_tree = ET.parse(os.path.abspath('../config') + '/RecordSaverConfig.xml')
         config_root = config_tree.getroot()
         self.record_dict = {}
         self.separator_dict = {}
@@ -45,8 +44,8 @@ class RecordSaveRestoreController():
                     print(rec.attrib["FileName"])
                     self.record_dict[rec.tag] = rec.attrib["FileName"]
                     self.separator_dict[rec.tag] = rec.attrib["Separator"]
-        print(self.record_dict)
-        print(self.separator_dict)
+        #print(self.record_dict)
+        #print(self.separator_dict)
     
     def fparse_req_file(self,record_name):
         '''Parses the .req file to get the correct EPICS PVs.
@@ -54,7 +53,9 @@ class RecordSaveRestoreController():
         #Figure out which req file to use
         selected_record_type = str(self.GUI_object.comboBox.currentText())
         req_filename = self.record_dict[selected_record_type]
-        with open(os.path.join(os.path.abspath('../config') + '/' + req_filename),'r') as req_file:
+        print(__file__)
+        with open(Path(__file__).parent.parent.joinpath('config', req_filename),'r') as req_file:
+        #with open(os.path.join(os.path.abspath('../config') + '/' + req_filename),'r') as req_file:
             #Trap for blank lines
             blank_lines = 0
             while blank_lines < 3:
